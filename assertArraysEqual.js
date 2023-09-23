@@ -12,14 +12,13 @@ let eqArrays = function (arr1, arr2) {
   return result;
 };
 
-const assertEqual = function(arr1, arr2) {
-  let arrMatch = eqArrays(arr1,arr2);
-  if (arrMatch === true) {
-    console.log(`✅✅✅Assertion Passed: Arrays Match`);
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1,arr2)) {
+    console.log("✅✅✅Assertion Passed: Arrays Match");
   } else {
-    console.log(`🛑🛑🛑Assertion Failed:  Arrays did not Match`);
+    console.log("🛑🛑🛑Assertion Failed:  Arrays did not Match");
   }
 };
 
-assertEqual([1, 2, 3], [1, 2, 3]); // => should PASS
-assertEqual([1, 2, 3], [1, 2, 4]); // => should FAIL
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 2, 4]); // => should FAIL
