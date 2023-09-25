@@ -39,9 +39,9 @@ const assertArraysEqual = function(arr1, arr2) {
 // refactored function using includes instead written Sept 24, 2023
 const without = function(sourceArr, removeArr) {
   let result = [];
-  for (let x = 0; x < sourceArr.length; x++) {
-    if (!removeArr.includes(sourceArr[x])) {
-      result.push(sourceArr[x]);
+  for (let item of sourceArr) {
+    if (!removeArr.includes(item)) {
+      result.push(item);
     }
   }
   return result;
