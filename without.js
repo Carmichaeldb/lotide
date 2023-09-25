@@ -1,20 +1,3 @@
-const without = function(sourceArr, removeArr) {
-  let result = [];
-  for (let x = 0; x < sourceArr.length; x++) {
-    result.push(sourceArr[x]);
-  }
-  console.log(result);
-  for (let n = 0; n < result.length; n++) {
-    for (let i of removeArr) {
-      if (i === result[n]) {
-        result.splice(n, 1);
-        n--;
-      }
-    }
-  }
-  return result;
-};
-
 const eqArrays = function(arr1, arr2) {
   let result;
   for (let x = 0; x < arr1.length; x++) {
@@ -34,6 +17,34 @@ const assertArraysEqual = function(arr1, arr2) {
   } else {
     console.log("🛑🛑🛑Assertion Failed:  Arrays did not Match");
   }
+};
+
+// Original function written Sept 23, 2023
+// const without = function(sourceArr, removeArr) {
+//   let result = [];
+//   for (let x = 0; x < sourceArr.length; x++) {
+//     result.push(sourceArr[x]);
+//   }
+//   for (let n = 0; n < result.length; n++) {
+//     for (let i of removeArr) {
+//       if (i === result[n]) {
+//         result.splice(n, 1);
+//         n--;
+//       }
+//     }
+//   }
+//   return result;
+// };
+
+// refactored function using includes instead written Sept 24, 2023
+const without = function(sourceArr, removeArr) {
+  let result = [];
+  for (let x = 0; x < sourceArr.length; x++) {
+    if (!removeArr.includes(sourceArr[x])) {
+      result.push(sourceArr[x]);
+    }
+  }
+  return result;
 };
 
 const words = ["hello", "world", "lighthouse"];
