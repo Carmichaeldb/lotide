@@ -38,8 +38,8 @@ const eqObjects = function(object1, object2) {
       } else if (object1[x] !== object2[x]) {
         return false;
       }
-      return true;
     }
+    return true;
   } else {
     return false;
   }
