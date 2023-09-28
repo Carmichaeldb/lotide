@@ -1,17 +1,11 @@
 //testing
-
 const eqArrays = function (arr1, arr2) {
-  let result;
   for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] === arr2[x] && arr1.length === arr2.length) {
-      result = true;
-    }
-    else {
-      result = false;
-      break;
+    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const assertArraysEqual = function(arr1, arr2) {
@@ -27,14 +21,6 @@ const assertArraysEqual = function(arr1, arr2) {
  * return object with keys of string letters
  * object properties are array of string letter indexes
  */
-// result{}
-// for i = 0 input.length i++
-//  if i === " "
-//  do nothing
-//  if result[input[i]]
-//  result[input[i]].push(i)
-//  else
-//  result[input[i]] = [i]
 
 const letterPositions = function(sentence) {
   const results = {};

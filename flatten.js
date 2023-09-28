@@ -15,17 +15,13 @@ const flatten = function(arr) {
 };
 
 
-const eqArrays = function(arr1, arr2) {
-  let result;
+const eqArrays = function (arr1, arr2) {
   for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] === arr2[x] && arr1.length === arr2.length) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const assertArraysEqual = function(arr1, arr2) {

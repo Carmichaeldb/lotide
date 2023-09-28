@@ -16,25 +16,21 @@ const assertEqual = function(actual, expected) {
 
 // method using for in loop
 // const findKeyByValue = function(tvObj, show) {
-//   let result;
 //   for (let x in tvObj) {
 //     if (tvObj[x] === show) {
-//       result = x;
+//       return x;
 //     }
 //   }
-//   return result;
 // };
 
 // different method using object.keys and for of based on tips in compass
 const findKeyByValue = function(tvObj, show) {
-  let result;
   let keys = Object.keys(tvObj);
   for (let x of keys) {
     if (tvObj[x] === show) {
-      result = x;
+      return x;
     }
   }
-  return result;
 };
 
 const bestTVShowsByGenre = {

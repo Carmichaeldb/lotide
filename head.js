@@ -9,8 +9,7 @@ const assertEqual = function(actual, expected) {
 
 //head function to return first element in an array
 const head = function(arr) {
-  let result = arr[0];
-  return result;
+  return arr[0];
 };
 
 //testing head function is returning first element in array

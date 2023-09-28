@@ -8,17 +8,13 @@ const assertEqual = function(actual, expected) {
 };
 
 //function that takes two arrays and returns true or false based on if arrays are perfect match
-const eqArrays = function(arr1, arr2) {
-  let result;
+const eqArrays = function (arr1, arr2) {
   for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] === arr2[x] && arr1.length === arr2.length) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 // Returns true if both objects have identical keys with identical values.
@@ -32,25 +28,21 @@ const eqArrays = function(arr1, arr2) {
  */
 
 const eqObjects = function(object1, object2) {
-  let result;
   if (Object.keys(object1).length === Object.keys(object2).length) {
     let keys = Object.keys(object1);
     for (let x of keys) {
       if (Array.isArray(object1[x]) && Array.isArray(object2[x])) {
         if (!eqArrays(object1[x], object2[x])) {
-          result = false;
+          return false;
         }
       } else if (object1[x] !== object2[x]) {
-        result = false;
-        break;
-      } else {
-        result = true;
+        return false;
       }
+      return true;
     }
   } else {
-    result = false;
+    return false;
   }
-  return result;
 };
 
 const shirtObject = { color: "red", size: "medium" };

@@ -1,14 +1,10 @@
-const eqArrays = function(arr1, arr2) {
-  let result;
+const eqArrays = function (arr1, arr2) {
   for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] === arr2[x] && arr1.length === arr2.length) {
-      result = true;
-    } else {
-      result = false;
-      break;
+    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 const assertArraysEqual = function(arr1, arr2) {
@@ -36,7 +32,7 @@ const assertArraysEqual = function(arr1, arr2) {
 //   return result;
 // };
 
-// refactored function using includes instead written Sept 24, 2023
+// refactored function using includes written Sept 24, 2023
 const without = function(sourceArr, removeArr) {
   let result = [];
   for (let item of sourceArr) {
