@@ -6,19 +6,19 @@
  */
 
 // method using for in loop
-// const findKeyByValue = function(tvObj, show) {
-//   for (let x in tvObj) {
-//     if (tvObj[x] === show) {
+// const findKeyByValue = function(obj, value) {
+//   for (let x in obj) {
+//     if (obj[x] === value) {
 //       return x;
 //     }
 //   }
 // };
 
 // different method using object.keys and for of based on tips in compass
-const findKeyByValue = function(tvObj, show) {
-  let keys = Object.keys(tvObj);
+const findKeyByValue = function(obj, value) {
+  let keys = Object.keys(obj);
   for (let x of keys) {
-    if (tvObj[x] === show) {
+    if (obj[x] === value) {
       return x;
     }
   }

@@ -1,8 +1,8 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "a collection of functions as a clone of Lodash, created and published for education purposes",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Carmichaeldb/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Carmichael",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Carmichaeldb/lotide/issues"
