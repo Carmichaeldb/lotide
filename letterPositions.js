@@ -1,21 +1,3 @@
-//testing
-const eqArrays = function (arr1, arr2) {
-  for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1,arr2)) {
-    console.log("✅✅✅Assertion Passed: Arrays Match");
-  } else {
-    console.log("🛑🛑🛑Assertion Failed:  Arrays did not Match");
-  }
-};
-
 /**
  * function input string
  * return object with keys of string letters
@@ -36,8 +18,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const result1 = letterPositions("lighthouse in the house");
-
-assertArraysEqual(result1["h"],[ 3, 5, 15, 18 ]);
-assertArraysEqual(result1["o"],[ 6, 19 ]);
-assertArraysEqual(result1["g"],[ 2 ]);
+module.exports = letterPositions;

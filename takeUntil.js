@@ -20,26 +20,4 @@ const takeUntil = function(arr, callback) {
   return result;
 };
 
-// to assertArraysEqual and eqArrays functions totest if results match expectations
-const eqArrays = function(arr1, arr2) {
-  for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1,arr2)) {
-    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:  ${arr1} !== ${arr2}`);
-  }
-};
-
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]);
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-assertArraysEqual(takeUntil(data2, x => x === ','), ["I've", "been", "to", "Hollywood"]);
+module.exports = takeUntil;

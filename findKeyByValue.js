@@ -1,12 +1,3 @@
-//Compares two values if they are equal or not.
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:  ${actual} !== ${expected}`);
-  }
-};
-
 /**
  * write function that has input of an object and a string
  * search object for key that has value equal to the string
@@ -33,11 +24,5 @@ const findKeyByValue = function(tvObj, show) {
   }
 };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
+module.exports = findKeyByValue;
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

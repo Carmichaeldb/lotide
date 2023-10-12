@@ -1,21 +1,4 @@
-const eqArrays = function (arr1, arr2) {
-  for (let x = 0; x < arr1.length; x++) {
-    if (arr1[x] !== arr2[x] || arr1.length !== arr2.length) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1,arr2)) {
-    console.log("✅✅✅Assertion Passed: Arrays Match");
-  } else {
-    console.log("🛑🛑🛑Assertion Failed:  Arrays did not Match");
-  }
-};
-
-// Original function written Sept 23, 2023
+// Original written function
 // const without = function(sourceArr, removeArr) {
 //   let result = [];
 //   for (let x = 0; x < sourceArr.length; x++) {
@@ -32,7 +15,7 @@ const assertArraysEqual = function(arr1, arr2) {
 //   return result;
 // };
 
-// refactored function using includes written Sept 24, 2023
+// refactored function using includes
 const without = function(sourceArr, removeArr) {
   let result = [];
   for (let item of sourceArr) {
@@ -43,10 +26,4 @@ const without = function(sourceArr, removeArr) {
   return result;
 };
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"]));
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-const numbers = [1, 2, 3, 4, 5, 2, 2, 3, 4, 1, 8, 1];
-console.log(without(numbers, [2, 4]));
-assertArraysEqual(numbers, [1, 2, 3, 4, 5, 2, 2, 3, 4, 1, 8, 1]);
+module.exports = without;

@@ -1,12 +1,3 @@
-//Compares two values if they are equal or not.
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:  ${actual} !== ${expected}`);
-  }
-};
-
 /**
  * create function countLetters
  * input a string
@@ -29,8 +20,4 @@ const countLetters = function(input) {
   return result;
 };
 
-const result1 = (countLetters("lighthouse in the house"));
-
-assertEqual(result1["h"], 4);
-assertEqual(result1["o"], 2);
-assertEqual(result1["g"], 1);
+module.exports = countLetters;
