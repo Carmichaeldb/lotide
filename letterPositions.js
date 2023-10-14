@@ -6,16 +6,16 @@
 
 const letterPositions = function(sentence) {
   const results = {};
-  for (let i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) { //iterate over string
     if (sentence[i] === " ") {
-      //do nothing
-    } else if (results[sentence[i]]) {
-      results[sentence[i]].push(i);
+      //do nothing if whitespace
+    } else if (results[sentence[i]]) { //if result object has key already
+      results[sentence[i]].push(i); //push index into result object in key of letters array property
     } else {
-      results[sentence[i]] = [i];
+      results[sentence[i]] = [i]; //create key of letter with property of array of index position
     }
   }
-  return results;
+  return results; //return results object
 };
 
 module.exports = letterPositions;

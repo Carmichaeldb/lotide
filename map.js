@@ -6,11 +6,11 @@
 
 //map function, takes array and callback function and returns array
 const map = function(arr, callback) {
-  const results = [];
-  for (let item of arr) {
-    results.push(callback(item));
+  const results = []; //array to return
+  for (let item of arr) { //iterates over input array
+    results.push(callback(item)); //pushes results of callback into results array
   }
-  return results;
+  return results; //returns result array
 };
 
 module.exports = map;

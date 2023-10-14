@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@carmichaeldb/lotide",
   "version": "1.0.0",
   "description": "a collection of functions as a clone of Lodash, created and published for education purposes",
   "main": "index.js",
@@ -23,5 +23,6 @@
   "devDependencies": {
     "chai": "^4.3.10",
     "mocha": "^9.2.2"
-  }
+  },
+  "dependencies": {}
 }

@@ -10,14 +10,14 @@
 // uses call back to determine when to end the loop
 // pushes array data into result array until callback logic is met
 const takeUntil = function(arr, callback) {
-  let result = [];
-  for (let item of arr) {
+  let result = []; //result array to return
+  for (let item of arr) { //iterates over array
     if (callback(item)) {
       break; //ends loop if callback logic is met
     }
-    result.push(item);
+    result.push(item); //if callback logic is not met push items in array into result
   }
-  return result;
+  return result; //return result
 };
 
 module.exports = takeUntil;
