@@ -3,17 +3,18 @@
 // do not remove any if array only has 1-2 values
 
 const middle = function (arr) {
-  let result = arr; //copies array so original is unaltered
+  let result = [];
   let i; //to hold middle index
-  if (result.length <= 2) { //if array contains only 1-2 values return them
+  if (arr.length <= 2) { //if array contains only 1-2 values return them
     return result;
-  } else if (result.length % 2 === 0) { //if array is even
-    i = result.length / 2 - 1; //find middle of array
-    result.splice(i, 2); //splice middle two values
+  } else if (arr.length % 2 === 0) { //if array is even
+    i = arr.length / 2; //find middle of array
+    result.push(arr[i - 1]);
+    result.push(arr[i]); //push the two middle indexes
     return result; //return result
   } else {
-    i = Math.floor(result.length / 2); //if array is odd find middle index
-    result.splice(i, 1); //splice middle index
+    i = Math.floor(arr.length / 2); //if array is odd find middle index
+    result.push(arr[i]); //push middle index
     return result; //return result
   }
 

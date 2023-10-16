@@ -10,7 +10,6 @@
 const findKey = function(objects, callback) {
   for (let key in objects) { //liteated over objects
     if (callback(objects[key])) { //uses callback to match key in object
-      // console.log(typeof(key));
       return key; //returns key if match found
     }
   }

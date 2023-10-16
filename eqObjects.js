@@ -15,6 +15,9 @@ const eqObjects = function(object1, object2) {
         if (!eqArrays(object1[x], object2[x])) { //if arrays do not match return false
           return false;
         }
+      } else if (Array.isArray(object1[x]) === false && Array.isArray(object2[x]) === false
+                && typeof(object1[x]) === "object" && typeof(object1[x]) === "object") {
+        eqObjects(object1[x], object2[x]);
       } else if (object1[x] !== object2[x]) { //check if object values at key do not match return false
         return false;
       }
@@ -24,5 +27,6 @@ const eqObjects = function(object1, object2) {
     return false; //return false if key length is not the same
   }
 };
+
 
 module.exports = eqObjects;
